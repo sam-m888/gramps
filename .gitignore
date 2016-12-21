@@ -6,6 +6,9 @@ MANIFEST
 build/
 dist/
 
+# Setuptools
+gramps.egg-info/
+
 # Gramps
 data/tips.xml
 data/holidays.xml

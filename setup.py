@@ -32,8 +32,13 @@ import sys
 if sys.version_info < (3, 2):
     raise SystemExit("Gramps requires Python 3.2 or later.")
 
+try:
+    from setuptools.core import setup
+except ImportError:
+    from distutils.core import setup
+
 from distutils import log
-from distutils.core import setup, Command
+from distutils.core import Command
 from distutils.util import convert_path, newer
 from distutils.command.build import build as _build
 from distutils.command.install import install as _install
